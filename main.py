@@ -2,8 +2,8 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route("/", methods=["POST"])
-def root():
+@app.route("/managed-object/config", methods=["POST"])
+def managed_object_config():
     print("=== New request ===")
     print("Headers:", request.headers)
     print("Body:", request.get_data(as_text=True))
